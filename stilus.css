@@ -1,26 +1,94 @@
 * {
     box-sizing: border-box;
-    padding: 0; 
+
 }
 
-main, header, nav, article, aside {
+body {
+    padding: 0;
+    margin: 0;
+}
+
+main,
+header,
+nav,
+article,
+aside {
     border: 1px solid black;
 }
+
 /*MAIN KIALAKÍTÁSA EGYSÉGES*/
+main {
+
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "n"
+        "a"
+        "f";
+    /*Talán egy aside mellé, ha van jóötleeted majd PL: mozgó képek, amik fentről lefelé csúsznak
+    ASIDE sötét móddal*/
+}
 
 
 
 /*Fejléc Kialakítása: EGYSÉGES*/
+header {
+    padding: 0;
+    margin: 0;
+    grid-area: h;
+    /* background-image: url();*/
+}
 
 /*MEnü kialakítása: EGYSÉGES*/
+nav {
+    grid-area: n;
 
+}
+
+nav ul {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    padding-left: 0;
+    
+}
+nav ul li {   
+    padding: 0  ;    
+    border: 1px solid black;
+
+}
 
 /*Linkel a menüben*/
+nav ul a {
+    text-decoration: none;
+    font-weight: bold;
+    
+    
+}
+
+nav ul a:hover {
+    background-color: blue;
+    padding: 15px;
+    border-radius: 40%;
+   
+
+}
 
 /*Article Kialakítása*/
+article {
+    padding: 5px;
+    grid-area: a;
+}
 
 
 /*Footer*/
-
+footer {
+    grid-area: f;
+    text-align: center;
+}
 
 /**/
