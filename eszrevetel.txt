@@ -7,3 +7,10 @@ https://ui.dev/amiresponsive?url=https://dvmaja.github.io/Dreilinger_Maja_Portfo
 
 FELADATOK
 hobbi lecsekkol munkák formáz
+
+https://ui.dev/amiresponsive?url=https://dvmaja.github.io/Dreilinger_Maja_Portfolio/
+számítógépes és telefonos reszponzivitási teszt OK
+
+videok ok 
+működnek
+linket nem engedett youtube
