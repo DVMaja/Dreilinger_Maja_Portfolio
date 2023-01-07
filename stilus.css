@@ -485,7 +485,7 @@ article .nagy-slider .slider {
 .videok {
     grid-area: vid;
     width: 400px;
-    border: 10px double rgb(3, 35, 54);
+    border: 15px double rgb(3, 35, 54);
     border-radius: 10px;
     background-color: rgb(112, 144, 163);
 }
