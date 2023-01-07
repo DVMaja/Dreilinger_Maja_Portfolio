@@ -1,0 +1,9 @@
+főoldal teljesen rendbenvan
+hobbinál jobb felső sarok üren fehér rész 
+argoszos oldal rendben van
+munkáim káosz
+lépgaléria működik
+https://ui.dev/amiresponsive?url=https://dvmaja.github.io/Dreilinger_Maja_Portfolio/galeria.html
+
+FELADATOK
+hobbi lecsekkol munkák formáz

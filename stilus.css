@@ -644,6 +644,10 @@ article .nagy-slider .slider {
 }
 
 @media only screen and (max-width: 600px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
     main {
         width: 100%;
     }
@@ -660,6 +664,9 @@ article .nagy-slider .slider {
 }
 
 @media only screen and (max-width: 500px) {
+    main {
+        width: 100%;
+    }
     nav ul {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -685,6 +692,10 @@ article .nagy-slider .slider {
     }/*Valamiért nem működik, majd ugyis rájössz miután leadtad.-> lehagytad az article-t...*/
 
     .slider .jobb .bal .nagykep .argkep .kep-jobb .kep-bal .kepek {
+        width: 100%;
+        height: auto;
+    }
+    .responziv {
         width: 100%;
         height: auto;
     }
