@@ -7,6 +7,7 @@
 h1 {
     font-size: 40px;
     font-weight: bold;
+    text-align: left;
 }
 h2 {
     font-size: 30px;
@@ -45,11 +46,13 @@ main {
     /*Talán egy aside mellé, ha van jóötleeted majd PL: mozgó képek, amik fentről lefelé csúsznak
     ASIDE sötét móddal*/
     background-color: rgb(173, 201, 101);
-    
+    border: 10px double rgb(58, 81, 0);  
+    border-radius: 10px;  
 }
 
 /*Fejléc Kialakítása: EGYSÉGES*/
 header {
+    width: 100%;
     max-width: 1000px;
     padding: 0;
     margin: 0;
@@ -59,7 +62,7 @@ header {
     /*border-radius: 20px;*/
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding-top: 5px;
+    
     border: 3px solid rgb(58, 81, 0) ;
 }
 
@@ -130,6 +133,24 @@ footer {
 footer p {
     font-size: 15px;    
 }
+
+/*FŐMENÜ*/
+.fooldal h2 {
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+article .profil {
+    text-align: center;   
+}
+.fooldal article p{
+    padding: 10px;
+}
+
+
 
 /*HOBBY*/
 /*KÉPEK*/
@@ -251,17 +272,17 @@ ul .haromszeles {
     background-color: rgb(131, 161, 54);
     box-shadow: 5px 5px 5px rgb(58, 81, 0);
 }
-/*
-article .profil {
-    text-align: center;   
-}
-*/
 
 /* Kutya KÉPGALÉRIA*/
+article .ar-galeria {
+    margin: auto;
+    width: 80%;
+    
+    
+}
 .ar-galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
+    grid-template-columns: 1fr 1fr;
     border: 5px solid rgb(58, 81, 0);
     text-align: center;
    
@@ -269,8 +290,13 @@ article .profil {
 .argkep {
     border: 7px double rgb(58, 81, 0);
     background-color: rgb(131, 161, 54);
-    
-}.argkep:hover {
+    width: 100%;      
+}
+.argkep img {
+    padding: 0;
+    border: 1px solid rgb(58, 81, 0);
+}
+.argkep:hover {
     transform: rotate(3deg);
 }
 
@@ -291,6 +317,8 @@ section {
     grid-area: s;
 }
 #masodik {
+    max-width: 990px;
+    margin: auto;
     padding-top: 10px;
     grid-area: mas;
     display: grid;
@@ -310,7 +338,7 @@ section {
     grid-area: bal;
 }
 .nagykep {
-    max-width: 1000px;
+    max-width: 980px;    
     grid-area: kep;
     margin: 0;
     padding: 5px 0px 5px 0px ;
@@ -319,6 +347,7 @@ section {
 }
 /*Magas Kepek  3*4 es vált*/
 .kepek-galeriaban {
+    max-width: 980px;
     grid-area: kg;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;     
@@ -327,6 +356,7 @@ section {
     padding-bottom: 20px;
 }
 .kepek-galeriaban img {
+    max-width: 300px;
     overflow: hidden;
     padding: 10px 10px 15px 10px;
     border: 1px solid #bfbfbf;
@@ -390,6 +420,197 @@ article .nagy-slider .slider{
         right: 400%;
     }
 }
-/* <div class="profil">
-                    <img src="kepek/argosz/argosz-profil200.jpg" alt="profilkep">
-                </div>*/
+
+/*RESZPONZIVITÁS!!!!!!!!!!      TESZTELD!*/
+@media only screen and (max-width: 1100px) {
+    h1{
+        font-size: calc(15px + 2vw); 
+    }   
+    article header footer {
+        width: 80%;
+    }  
+    .ar-galeria {
+        grid-template-columns: 1fr 1fr;  
+        max-width: 650px;             
+        margin: auto;                       
+    } 
+    #masodik {      
+        margin: auto;  
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "bal"
+        "jobb";
+      
+    } 
+    .kepek-galeriaban {
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+    } 
+    .nagykep {    
+        margin: auto;    
+        max-width: 980px;
+        width: calc(980px - 8%);
+    }
+
+  }
+@media only screen and (max-width: 1000px) {
+    article {
+        width: 100%;
+    } 
+    main {
+        width: 100%;
+    }  
+    nav {
+        width: 100%;
+    } 
+  }
+  @media only screen and (max-width: 900px){
+    body {
+        background-image: none;
+        margin: 0;
+        padding: 0;
+        
+        
+    }
+    main {
+        border-radius: 0;
+    }
+    nav ul {        
+        grid-template-columns: 1fr 1fr;         
+        grid-template-areas: 
+        "elso elso"
+        "masodik harmadik"        
+        "negyedik otodik";
+        gap: 5px;
+    }
+    nav ul .elso {
+        grid-area: elso;
+    }
+    nav ul .elso:hover {
+        transform: rotate(-1deg);
+    }
+    nav ul .masodik {
+        grid-area: masodik;
+    }
+    nav ul .harmadik {
+        grid-area: harmadik;
+    }
+    nav ul .negyedik {
+        grid-area: negyedik;
+    }
+    nav ul .otodik {
+        grid-area: otodik;
+    } 
+    article .olvasas {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "sz sz"
+        "kj kj"
+        "kb fs";
+    }
+    .kep-jobb {        
+        text-align: center;        
+    }
+    .kepgaleria {
+        grid-template-columns: 1fr; 
+    }
+  }
+  @media only screen and (max-width: 850px) { 
+    article .ar-galeria {
+        width: 100%;
+        
+    }
+  }
+  @media only screen and (max-width: 750px) {    
+    .lovaglas {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "sz"
+        "kj";
+    }
+      
+  }
+  @media only screen and (max-width: 700px) {
+    .ar-galeria {
+        grid-template-columns: 1fr;             
+        max-width: 325px;
+    }
+    
+  }
+
+  @media only screen and (max-width: 600px) {          
+    main {
+        width: 100%;
+    }
+    article {
+        width: 100%;
+        max-width: 600px;
+    }
+    .felsor {
+        text-align: left;
+    }
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    nav ul {
+        grid-template-columns: 1fr;         
+        grid-template-areas: 
+        "elso"
+        "masodik"
+        "harmadik"
+        "negyedik"
+        "otodik";
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    h1 {
+        font-size: calc(45px - 20%);
+        text-align: center;
+        padding: 0;
+        margin: 0;        
+    }
+    nav ul{           
+        width: 100%; 
+        padding: 0;
+        margin: 0;   
+    }
+    main {
+        max-width: 450px;
+        width: 100%;
+    }
+    article header nav footer {
+        width: 100%;        
+    }   
+    h2 {
+        text-align: left;        
+    }
+    
+    .argkep img{
+        width: calc(100% - 20%);
+    }
+    .ar-galeria {        
+        margin: auto;        
+    }    
+  }
+  
+  @media only screen and (max-width: 350px){
+        h1 {
+            font-size: calc(35px - 20%);
+        }
+        .fooldal h2 {
+            font-size: calc(30px - 20%);
+        }
+        .profil img{
+            max-width: calc(300px - 20%);
+            width: 100%;
+            margin: auto;
+        }
+  }
+
+  @media only screen and (max-width: 300px){
+    h1 {
+        font-size: calc(30px - 20%);
+    }
+    
+  }
