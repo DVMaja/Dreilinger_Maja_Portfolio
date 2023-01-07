@@ -9,16 +9,20 @@ h1 {
     font-weight: bold;
     text-align: left;
 }
+
 h2 {
     font-size: 30px;
 }
+
 h3 {
     font-size: 25px;
 }
+
 p {
-    text-indent: 10px; 
+    text-indent: 10px;
     font-size: 20px;
 }
+
 li {
     font-size: 20px;
 }
@@ -32,10 +36,10 @@ body {
 
 
 /*MAIN KIALAKÍTÁSA EGYSÉGES*/
-main {       
+main {
     margin: auto;
-    width: 90%;
-    max-width: 1000px;
+    width: 95%;
+    max-width: 1100px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -46,46 +50,47 @@ main {
     /*Talán egy aside mellé, ha van jóötleeted majd PL: mozgó képek, amik fentről lefelé csúsznak
     ASIDE sötét móddal*/
     background-color: rgb(173, 201, 101);
-    border: 10px double rgb(58, 81, 0);  
-    border-radius: 10px;  
+    border: 10px double rgb(58, 81, 0);
+    border-radius: 10px;
 }
 
 /*Fejléc Kialakítása: EGYSÉGES*/
 header {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
     padding: 0;
     margin: 0;
     grid-area: h;
     /* background-image: url();*/
-    background-color: rgb(131, 161, 54);       
+    background-color: rgb(131, 161, 54);
     /*border-radius: 20px;*/
     text-transform: uppercase;
     letter-spacing: 2px;
-    
-    border: 3px solid rgb(58, 81, 0) ;
+
+    border: 3px solid rgb(58, 81, 0);
 }
 
 /*MEnü kialakítása: EGYSÉGES*/
 nav {
-    max-width: 1000px;
-    grid-area: n;  
-    background-color: rgb(173, 201, 101);     
-    
+    max-width: 1100px;
+    grid-area: n;
+    background-color: rgb(173, 201, 101);
+
 }
 
-nav ul {    
+nav ul {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     list-style-type: none;
-    padding-left: 0;   
-    margin: 0;       
-    border-bottom: 5px solid rgb(58, 81, 0);   
-      
+    padding-left: 0;
+    margin: 0;
+    border-bottom: 5px solid rgb(58, 81, 0);
+
 }
-nav ul li {   
-    padding: 0  ;    
+
+nav ul li {
+    padding: 0;
     border: 1px solid rgb(58, 81, 0);
     background-color: rgb(112, 144, 163);
     height: 50px;
@@ -96,20 +101,22 @@ nav ul li {
 /*Linkel a menüben*/
 nav ul a {
     text-decoration: none;
-    font-weight: bold; 
-    color: rgb(3, 35, 54);   
+    font-weight: bold;
+    color: rgb(3, 35, 54);
     text-transform: uppercase;
 }
 
 nav ul li:hover {
     background-color: rgb(3, 35, 54);
-    color: rgb(112, 144, 163);   
-    transform: rotate(-3deg);   
+    color: rgb(112, 144, 163);
+    transform: rotate(-3deg);
 }
+
 nav ul a:hover {
-    color: rgb(112, 144, 163); 
-    
+    color: rgb(112, 144, 163);
+
 }
+
 nav ul li:active {
     background-color: rgb(18, 58, 82);
 }
@@ -125,13 +132,14 @@ article {
 
 /*Footer*/
 footer {
-    max-width: 1000px;
+    max-width: 1100px;
     grid-area: f;
     text-align: center;
-    background-color: rgb(255, 217, 170);   
+    background-color: rgb(255, 217, 170);
 }
+
 footer p {
-    font-size: 15px;    
+    font-size: 15px;
 }
 
 /*FŐMENÜ*/
@@ -144,9 +152,10 @@ footer p {
 }
 
 article .profil {
-    text-align: center;   
+    text-align: center;
 }
-.fooldal article p{
+
+.fooldal article p {
     padding: 10px;
 }
 
@@ -157,11 +166,11 @@ article .profil {
 /*HOBBY képgaléria*/
 .kepgaleria {
     display: grid;
-    grid-template-columns: 1fr 1fr;   
-    
+    grid-template-columns: 1fr 1fr;
     text-align: center;
 }
-.kepek img{
+
+.kepek img {
     overflow: hidden;
 
     padding: 10px 10px 20px 10px;
@@ -169,53 +178,61 @@ article .profil {
     background-color: white;
     box-shadow: 5px 5px 5px rgb(58, 81, 0);
 }
+
 .jobb:hover {
     transform: rotate(-3deg);
 }
+
 .bal:hover {
     transform: rotate(3deg);
 }
+
 /*HOBBY kepek*/
 .kep-jobb {
     float: right;
-    grid-area: kj;    
+    grid-area: kj;
 }
-.lovaglas .kep-jobb img{
-    border-radius: 50%;
-    border: 10px double black;    
 
-} 
+.lovaglas .kep-jobb img {
+    border-radius: 50%;
+    border: 10px double black;
+
+}
+
 .lovaglas .kep-jobb img:hover {
     transform: rotate(-10deg);
 }
 
-.lovaglas{
+.lovaglas {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-    "sz kj";
-    gap: 5px;    
+        "sz kj";
+    gap: 5px;
 }
 
 .clear {
     clear: both;
 }
+
 /*OLVASAS*/
 .olvasas {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
-    "sz kj"
-    "kb fs";   
-    gap: 5px;    
+        "sz kj"
+        "kb fs";
+    gap: 5px;
 }
 
 .szovegek {
     grid-area: sz;
 }
+
 .felsor {
     grid-area: fs;
 }
+
 .kep-bal {
     grid-area: kb;
 }
@@ -223,6 +240,7 @@ article .profil {
 .olvasas .kep-jobb {
     grid-area: kj;
 }
+
 ul .haromszeles {
     overflow: hidden;
     max-width: 300px;
@@ -232,38 +250,43 @@ ul .haromszeles {
 /*MUNKÁIM*/
 .feladatok {
     display: grid;
-    grid-template-columns: 1fr 1fr;   
-    text-align: center;     
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
 }
+
 .munkak section {
-    border: 15px double rgb(58, 81, 0);  
-    background-color: rgb(131, 161, 54);  
-    border-radius: 30px;   
+    border: 15px double rgb(58, 81, 0);
+    background-color: rgb(131, 161, 54);
+    border-radius: 30px;
     width: 80%;
     max-width: 600px;
-    margin-bottom: 10px;   
+    margin-bottom: 10px;
     margin: auto;
-      
+
 }
+
 .munkak section div {
     text-align: center;
 }
+
 .munkak h2 {
     text-align: center;
     font-size: 35px;
     letter-spacing: 3px;
 }
+
 .munkak p {
     text-align: center;
 }
-.munkak section h3{
-           text-align: center;
+
+.munkak section h3 {
+    text-align: center;
 }
 
 
 
 /*KUTYUSOMROL*/
-.profil img{    
+.profil img {
     border-radius: 70%;
     overflow: hidden;
 
@@ -277,92 +300,113 @@ ul .haromszeles {
 article .ar-galeria {
     margin: auto;
     width: 80%;
-    
-    
+
 }
+
 .ar-galeria {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 5px solid rgb(58, 81, 0);
     text-align: center;
-   
+
 }
+
 .argkep {
     border: 7px double rgb(58, 81, 0);
     background-color: rgb(131, 161, 54);
-    width: 100%;      
+    width: 100%;
 }
+
 .argkep img {
     padding: 0;
     border: 1px solid rgb(58, 81, 0);
 }
+
 .argkep:hover {
     transform: rotate(3deg);
 }
 
 /*GALÉRIA*/
+.galeria h2 {
+    text-align: center;
+}
+
 .galeria {
-    margin: 0;
-    padding: 0;
+    margin: auto;
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "szov"
-    "kep"
-    "mas"
-    "kg";
-    }
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "szov"
+        "elso"
+        "mas"
+        "kg";
+}
 
 section {
     grid-area: s;
 }
+
+#elso {
+    width: 100%;
+    max-width: 980px;
+    grid-area: elso;
+    border-top: 10px double rgb(58, 81, 0);
+    border-bottom: 10px double rgb(58, 81, 0);
+}
+
 #masodik {
-    max-width: 990px;
     margin: auto;
+    text-align: center;
     padding-top: 10px;
     grid-area: mas;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "bal jobb";
+    grid-template-areas:
+        "bal jobb";
     gap: 5px;
     padding: 5px;
 }
+
 .szoveg {
     grid-area: szov;
 }
+
 #jobbra {
     grid-area: jobb;
 }
+
 #balra {
     grid-area: bal;
 }
+
 .nagykep {
-    max-width: 980px;    
+    width: 980px;
     grid-area: kep;
-    margin: 0;
-    padding: 5px 0px 5px 0px ;
-    border-top:10px double rgb(58, 81, 0) ;
-    border-bottom:10px double rgb(58, 81, 0) ;
+    padding: 5px 0px 5px 0px;
+
 }
+
 /*Magas Kepek  3*4 es vált*/
 .kepek-galeriaban {
     max-width: 980px;
     grid-area: kg;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;     
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     padding: 10px;
     padding-bottom: 20px;
 }
+
 .kepek-galeriaban img {
     max-width: 300px;
     overflow: hidden;
     padding: 10px 10px 15px 10px;
     border: 1px solid #bfbfbf;
-    background-color: rgb(65, 0 , 44);
+    background-color: rgb(65, 0, 44);
     box-shadow: 5px 5px 5px rgb(58, 81, 0);
 }
+
 .jobb:hover {
     transform: rotate(-3deg);
 }
@@ -379,6 +423,7 @@ section {
     border-radius: 20px;
     grid-area: nk;
 }
+
 .nagy-slider figure {
     position: relative;
     width: 500%;
@@ -386,7 +431,8 @@ section {
     animation: 20s nagyslider infinite;
 
 }
-article .nagy-slider .slider{
+
+article .nagy-slider .slider {
     float: right;
     width: 20%;
 }
@@ -395,27 +441,35 @@ article .nagy-slider .slider{
     0% {
         right: 0;
     }
+
     20% {
         right: 0;
     }
+
     25% {
         right: 100%;
     }
+
     45% {
         right: 100%;
     }
+
     50% {
         right: 200%;
     }
+
     70% {
         right: 200%;
     }
+
     75% {
         right: 300%;
     }
+
     95% {
         right: 300%;
     }
+
     100% {
         right: 400%;
     }
@@ -423,194 +477,291 @@ article .nagy-slider .slider{
 
 /*RESZPONZIVITÁS!!!!!!!!!!      TESZTELD!*/
 @media only screen and (max-width: 1100px) {
-    h1{
-        font-size: calc(15px + 2vw); 
-    }   
+    h1 {
+        font-size: calc(15px + 2vw);
+    }
+
     article header footer {
         width: 80%;
-    }  
+    }
+
     .ar-galeria {
-        grid-template-columns: 1fr 1fr;  
-        max-width: 650px;             
-        margin: auto;                       
-    } 
-    #masodik {      
-        margin: auto;  
+        grid-template-columns: 1fr 1fr;
+        max-width: 650px;
+        margin: auto;
+    }
+
+    #masodik {
+        margin: auto;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "bal"
-        "jobb";
-      
-    } 
+        grid-template-areas:
+            "bal"
+            "jobb";
+
+    }
+
     .kepek-galeriaban {
         grid-template-columns: 1fr 1fr;
         margin: auto;
-    } 
-    .nagykep {    
-        margin: auto;    
-        max-width: 980px;
-        width: calc(980px - 8%);
     }
 
-  }
+    .galeria .nagykep {
+        margin: auto;
+    }
+
+    #elso {
+        margin: auto;
+        max-width: 980px;
+        overflow: hidden;
+    }
+
+}
+
 @media only screen and (max-width: 1000px) {
     article {
         width: 100%;
-    } 
+    }
+
     main {
         width: 100%;
-    }  
+    }
+
     nav {
         width: 100%;
-    } 
-  }
-  @media only screen and (max-width: 900px){
+    }
+
+    .nagykep {
+        max-width: 980px;
+        width: calc(980px - 60px);
+    }
+
+    #elso {
+        width: calc();
+    }
+
+    .slider .jobb .bal .nagykep .argkep .kep-jobb .kep-bal .kepekkepek {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
     body {
         background-image: none;
         margin: 0;
         padding: 0;
-        
-        
+
+
     }
+
     main {
         border-radius: 0;
     }
-    nav ul {        
-        grid-template-columns: 1fr 1fr;         
-        grid-template-areas: 
-        "elso elso"
-        "masodik harmadik"        
-        "negyedik otodik";
+
+    nav ul {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "elso elso"
+            "masodik harmadik"
+            "negyedik otodik";
         gap: 5px;
     }
+
     nav ul .elso {
         grid-area: elso;
     }
+
     nav ul .elso:hover {
         transform: rotate(-1deg);
     }
+
     nav ul .masodik {
         grid-area: masodik;
     }
+
     nav ul .harmadik {
         grid-area: harmadik;
     }
+
     nav ul .negyedik {
         grid-area: negyedik;
     }
+
     nav ul .otodik {
         grid-area: otodik;
-    } 
+    }
+
     article .olvasas {
         grid-template-columns: 1fr 3fr;
-        grid-template-areas: 
-        "sz sz"
-        "kj kj"
-        "kb fs";
+        grid-template-areas:
+            "sz sz"
+            "kj kj"
+            "kb fs";
     }
-    .kep-jobb {        
-        text-align: center;        
+
+    .kep-jobb {
+        text-align: center;
     }
+
     .kepgaleria {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
-  }
-  @media only screen and (max-width: 850px) { 
+}
+
+@media only screen and (max-width: 850px) {
     article .ar-galeria {
         width: 100%;
-        
     }
-  }
-  @media only screen and (max-width: 750px) {    
+}
+
+@media only screen and (max-width: 750px) {
     .lovaglas {
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "sz"
-        "kj";
+        grid-template-areas:
+            "sz"
+            "kj";
     }
-      
-  }
-  @media only screen and (max-width: 700px) {
+
+}
+
+@media only screen and (max-width: 700px) {
     .ar-galeria {
-        grid-template-columns: 1fr;             
+        grid-template-columns: 1fr;
         max-width: 325px;
     }
-    
-  }
+    .slider .jobb .bal .nagykep .argkep .kep-jobb .kep-bal .kepekkepek {
+        width: 100%;
+        height: auto;
+    }
 
-  @media only screen and (max-width: 600px) {          
+}
+
+@media only screen and (max-width: 650px) {
+    .kepek-galeriaban {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
     main {
         width: 100%;
     }
+
     article {
         width: 100%;
         max-width: 600px;
     }
+
     .felsor {
         text-align: left;
     }
 
-  }
+}
 
-  @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     nav ul {
-        grid-template-columns: 1fr;         
-        grid-template-areas: 
-        "elso"
-        "masodik"
-        "harmadik"
-        "negyedik"
-        "otodik";
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "elso"
+            "masodik"
+            "harmadik"
+            "negyedik"
+            "otodik";
     }
-  }
-  @media only screen and (max-width: 450px) {
+
+    p {
+        text-align: left;
+    }
+    article .olvasas {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "sz"
+            "kj"
+            "fs"
+            "kb";
+    }/*Valamiért nem működik, majd ugyis rájössz miután leadtad.-> lehagytad az article-t...*/
+
+    .slider .jobb .bal .nagykep .argkep .kep-jobb .kep-bal .kepek {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 450px) {
     h1 {
         font-size: calc(45px - 20%);
         text-align: center;
         padding: 0;
-        margin: 0;        
+        margin: 0;
     }
-    nav ul{           
-        width: 100%; 
+
+    nav ul {
+        width: 100%;
         padding: 0;
-        margin: 0;   
+        margin: 0;
     }
+
     main {
         max-width: 450px;
         width: 100%;
     }
+
     article header nav footer {
-        width: 100%;        
-    }   
-    h2 {
-        text-align: left;        
+        width: 100%;
     }
-    
-    .argkep img{
+
+    h2 {
+        text-align: left;
+    }
+
+    .argkep img {
         width: calc(100% - 20%);
     }
-    .ar-galeria {        
-        margin: auto;        
-    }    
-  }
-  
-  @media only screen and (max-width: 350px){
-        h1 {
-            font-size: calc(35px - 20%);
-        }
-        .fooldal h2 {
-            font-size: calc(30px - 20%);
-        }
-        .profil img{
-            max-width: calc(300px - 20%);
-            width: 100%;
-            margin: auto;
-        }
-  }
 
-  @media only screen and (max-width: 300px){
+    .ar-galeria {
+        margin: auto;
+    }
+
+    .olvasas {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    h1 {
+        font-size: calc(30px - 8%);
+
+    }
+
+    main {
+        border: none;
+        background-color: none;
+        padding: 0;
+
+    }
+
+    .fooldal h2 {
+        font-size: calc(30px - 20%);
+    }
+
+    .profil img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nagy-slider {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 300px) {
     h1 {
         font-size: calc(30px - 20%);
     }
-    
-  }
+
+}
