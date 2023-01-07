@@ -128,6 +128,9 @@ article {
     grid-area: a;
     max-width: 1000px;
 }
+article ul {
+    list-style: url(kepek/icon.png);   
+}
 
 
 /*Footer*/
@@ -489,6 +492,12 @@ article .nagy-slider .slider {
     border-radius: 10px;
     background-color: rgb(112, 144, 163);
 }
+.szoveg a {
+    text-decoration: none;
+    color: rgb(65, 0, 44);
+    font-weight: bold;
+}
+
 
 /*RESZPONZIVITÁS!!!!!!!!!!      TESZTELD!*/
 @media only screen and (max-width: 1100px) {
