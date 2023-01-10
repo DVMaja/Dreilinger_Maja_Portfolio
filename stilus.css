@@ -730,6 +730,9 @@ article .nagy-slider .slider {
         padding: 0;
         margin: 0;
     }
+    footer p{
+        text-align: center;
+    }
 
     nav ul {
         width: 100%;
