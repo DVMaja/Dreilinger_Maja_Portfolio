@@ -75,7 +75,6 @@ nav {
     max-width: 1100px;
     grid-area: n;
     background-color: rgb(173, 201, 101);
-
 }
 
 nav ul {
@@ -86,15 +85,12 @@ nav ul {
     padding-left: 0;
     margin: 0;
     border-bottom: 5px solid rgb(58, 81, 0);
-
 }
 
 nav ul li {
     padding: 0;
     border: 1px solid rgb(58, 81, 0);
-    background-color: rgb(112, 144, 163);
-    height: 50px;
-    padding-top: 15px;
+    background-color: rgb(112, 144, 163);    
     margin-bottom: 5px;
 }
 
@@ -104,8 +100,10 @@ nav ul a {
     font-weight: bold;
     color: rgb(3, 35, 54);
     text-transform: uppercase;
+    display: block;
+    height: 50px;
+    padding-top: 15px;   
 }
-
 nav ul li:hover {
     background-color: rgb(3, 35, 54);
     color: rgb(112, 144, 163);
@@ -114,7 +112,6 @@ nav ul li:hover {
 
 nav ul a:hover {
     color: rgb(112, 144, 163);
-
 }
 
 nav ul li:active {
@@ -498,6 +495,31 @@ article .nagy-slider .slider {
     font-weight: bold;
 }
 
+/*MUNKÁIM LINKEK*/
+.linktarolo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 50px;  
+    gap: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;    
+}
+.linktarolo .linkek {
+    border-radius: 30px;
+    border: 5px double rgb(65, 0, 44);    
+    width: 80%;
+    text-align: center;
+    background-color: rgb(112, 144, 163);
+
+}
+.linkek a {
+    color: rgb(65, 0, 44);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
 
 /*RESZPONZIVITÁS!!!!!!!!!!      TESZTELD!*/
 @media only screen and (max-width: 1100px) {
@@ -635,6 +657,11 @@ article .nagy-slider .slider {
     article .ar-galeria {
         width: 100%;
     }
+    .feladatok {
+        display: grid;
+        grid-template-columns: 1fr;
+    }    
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -662,6 +689,10 @@ article .nagy-slider .slider {
 @media only screen and (max-width: 650px) {
     .kepek-galeriaban {
         grid-template-columns: 1fr;
+    }
+    .linktarolo {
+        display: grid;
+        grid-template-columns: 1fr;          
     }
 }
 
@@ -720,6 +751,9 @@ article .nagy-slider .slider {
     .responziv {
         width: 100%;
         height: auto;
+    }
+    footer p{
+        text-align: center;
     }
 }
 

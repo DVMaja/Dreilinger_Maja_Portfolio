@@ -14,3 +14,4 @@ számítógépes és telefonos reszponzivitási teszt OK
 videok ok 
 működnek
 linket nem engedett youtube
+github és pages link
